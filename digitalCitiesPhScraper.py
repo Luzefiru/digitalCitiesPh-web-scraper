@@ -15,9 +15,9 @@ def jsonExtractor():
 
     Description
     -----------
-    > Ignores SSL certificate errors to access a URL in the global scope 'url'.
-    > Extracts the 'unclean_json' based on the parameters set in "soup.findAll()".
-    > Writes the unclean_json into a file called "jsonExtracted.json" with the UTF-8 format.
+    * Ignores SSL certificate errors to access a URL in the global scope 'url'.
+    * Extracts the 'unclean_json' based on the parameters set in "soup.findAll()".
+    * Writes the unclean_json into a file called "jsonExtracted.json" with the UTF-8 format.
 
     """
     from urllib.request import urlopen
@@ -54,9 +54,9 @@ def jsonTrimmer():
 
     Description
     -----------
-    > This reads the file "jsonExtracted.json" then uses Regular Expressions to extract the useful data by trimming the 'start_of_json' & 'end_of_json'.
-    > It then returns the useful json as a string for "jsonPrettyPrinter()".
-    > This depends on the previous function "jsonExtractor()" execution to work.
+    * This reads the file "jsonExtracted.json" then uses Regular Expressions to extract the useful data by trimming the 'start_of_json' & 'end_of_json'.
+    * It then returns the useful json as a string for "jsonPrettyPrinter()".
+    * This depends on the previous function "jsonExtractor()" execution to work.
 
     """
     import re
@@ -84,10 +84,10 @@ def jsonPrettyPrinter():
 
     Description
     -----------
-    > It uses the string found in the function "jsonTrimmer()" then formats it with indentation as 'formatted_json'.
-    > It then creates a file called "jsonCleaned.json" and writes the 'formatted_json' data.
-    > This depends on the previous function "jsonTrimmer()" to be executed first.
-    > This creates a cleaned .json data file, called "jsonCleaned.json", to be loaded as a Python dictionary data structure.
+    * It uses the string found in the function "jsonTrimmer()" then formats it with indentation as 'formatted_json'.
+    * It then creates a file called "jsonCleaned.json" and writes the 'formatted_json' data.
+    * This depends on the previous function "jsonTrimmer()" to be executed first.
+    * This creates a cleaned .json data file, called "jsonCleaned.json", to be loaded as a Python dictionary data structure.
 
     """
     import json
@@ -104,8 +104,8 @@ def jsonPrettyPrinter():
 def __main__():
     """
 
-    (!!!) THIS IS DISFUNCTIONAL (!!!) REFER TO MY OLD CODE BELOW (!!!)
-    > The output contains HTML tags and is very messy. It's unusable for easy MS Excel processing.
+    ### (!!!) THIS IS DISFUNCTIONAL (!!!) REFER TO MY OLD CODE BELOW (!!!)
+    * The output contains HTML tags and is very messy. It's unusable for easy MS Excel processing.
     
     """
     import json
